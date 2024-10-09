@@ -24,7 +24,7 @@ class Player(models.Model):
     height = models.DecimalField(max_digits=3, decimal_places=2)
     weight = models.IntegerField()
     comment = models.CharField(max_length=200, blank=True)
-    
+
     def __str__(self):
         return self.first_name + " " + self.last_name
 # Create your models here.
