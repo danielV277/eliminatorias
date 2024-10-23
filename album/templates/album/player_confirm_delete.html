@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block maincontent %}
+    <form action="" method="POST">{% csrf_token %}
+        <p>Esta seguro de elimanr el jugador: {{object.first_name}} ?</p>
+        <input type="submit" value="confirm"/>
+        <a href="{% url 'player_list' %}"> Cancel</a>
+    </form>
+    
+
+{% endblock maincontent %}

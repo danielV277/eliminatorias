@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block maincontent %}
+    <form action="" method="POST">{% csrf_token %}
+        <p>Esta seguro de elimanr el equipo: {{object.name}} ?</p>
+        <input type="submit" value="confirm"/>
+        <a href="{% url 'team_list' %}"> Cancel</a>
+    </form>
+    
+
+{% endblock maincontent %}

@@ -3,7 +3,9 @@
 {% load static %}
 
 {% block section %}
-   <h2>
+   <a href="{% url 'team_update' object.id%}" >Edit</a>
+   <a href="{% url 'team_delete' object.id%}" >Delete</a>
+    <h2>
        {{ object.first_name }} {{ object.last_name }}
        {% if object.team_id %}
          ( <a href='{% url "team_detail" object.team_id %}'>
